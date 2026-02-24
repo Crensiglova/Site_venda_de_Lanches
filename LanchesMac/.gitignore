@@ -1,0 +1,18 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.cache
+
+# Build folders
+bin/
+obj/
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+
+# Publish
+Properties/PublishProfiles/

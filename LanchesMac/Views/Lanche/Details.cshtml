@@ -1,4 +1,93 @@
-﻿@model Lanche
+﻿<style>
+    .lanche-card {
+        border-radius: 16px;
+        overflow: hidden;
+        transition: transform .2s ease, box-shadow .2s ease;
+        background: #fff;
+    }
+
+        .lanche-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+    /* container da imagem */
+    .lanche-img-container {
+        height: 220px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    /* imagem sem corte e sem distorção */
+    .lanche-img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .card-body h4 {
+        font-size: 1.4rem;
+    }
+
+    .btn-primary {
+        background-color: #ff3d00;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            background-color: #e63600;
+        }
+</style>
+
+@model Lanche
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card lanche-card border-0 shadow-sm">
+
+                <!-- área da imagem -->
+                <div class="lanche-img-container">
+                    <img src="@Model.ImagemUrl"
+                         class="lanche-img"
+                         alt="@Model.Nome">
+                </div>
+
+                <div class="card-body text-center">
+
+                    <h4 class="fw-bold mb-1">@Model.Nome</h4>
+
+                    <p class="text-muted small mb-3">
+                        @Model.DescricaoDetalhada
+                    </p>
+
+                    <div class="d-grid gap-2">
+
+                        <a asp-controller="CarrinhoCompra"
+                           asp-action="AdicionarItemNoCarrinhoCompra"
+                           asp-route-lancheId="@Model.LancheId"
+                           class="btn btn-primary btn-lg">
+                            🛒 Adicionar ao carrinho
+                        </a>
+
+                        <a asp-controller="Lanche"
+                           asp-action="List"
+                           class="btn btn-outline-secondary">
+                            Ver todos os lanches
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* @model Lanche
 <div class="container">
     <div class="row">
         <div class="card">
@@ -20,4 +109,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> *@

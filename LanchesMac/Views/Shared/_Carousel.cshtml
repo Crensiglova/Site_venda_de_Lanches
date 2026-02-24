@@ -1,4 +1,4 @@
-﻿<div id="carouselLanches" class="carousel slide" data-bs-ride="carousel">
+﻿@* <div id="carouselLanches" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="~/images/carousel11.jpg" class="d-block w-100" alt="">
@@ -18,4 +18,135 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div> *@
+
+
+@* <style>
+    .carousel-img {
+        height: 380px;
+        object-fit: cover;
+    }
+
+    .carousel-item img {
+        height: 420px;
+        object-fit: cover;
+    }
+</style> *@
+@* 
+<div id="carouselLanches" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
+
+    <div class="carousel-inner rounded shadow-sm">
+
+        <div class="carousel-item active">
+            <img src="~/images/carousel11.jpg" class="d-block w-100 carousel-img" alt="">
+            <div class="carousel-caption">
+                <h2>Os preferidos da semana</h2>
+                <p>Experimente nossos lanches mais pedidos</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="~/images/carousel12.jpg" class="d-block w-100 carousel-img" alt="">
+        </div>
+
+        <div class="carousel-item">
+            <img src="~/images/carousel13.jpg" class="d-block w-100 carousel-img" alt="">
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLanches" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselLanches" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+ *@
+
+
+
+
+<style>
+    /* imagem */
+    .carousel-img {
+        height: 420px;
+        object-fit: cover;
+        filter: brightness(70%);
+    }
+
+    /* caixa do texto */
+    .custom-caption {
+        bottom: 25%;
+        text-align: left;
+    }
+
+        /* título */
+        .custom-caption h2 {
+            font-size: 42px;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* descrição */
+        .custom-caption p {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* botão estilo app */
+        .custom-caption .btn {
+            border-radius: 30px;
+            padding: 10px 28px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+            
+</style>
+
+
+
+<div id="carouselLanches" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="~/images/carousel11.jpg" class="d-block w-100 carousel-img">
+            <div class="carousel-caption custom-caption">
+                <h2>Hambúrguer Artesanal</h2>
+                <p>Suculento, preparado na hora 🔥</p>
+                <a href="/Lanche" class="btn btn-danger btn-lg">Peça agora</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="~/images/carousel12.jpg" class="d-block w-100 carousel-img">
+            <div class="carousel-caption custom-caption">
+                <h2>Sanduíches Naturais</h2>
+                <p>Sabor e leveza para seu dia</p>
+                <a href="/Lanche" class="btn btn-warning btn-lg">Ver opções</a>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="~/images/carousel13.jpg" class="d-block w-100 carousel-img">
+            <div class="carousel-caption custom-caption">
+                <h2>Combos Imperdíveis</h2>
+                <p>Mais sabor pagando menos 😍</p>
+                <a href="/Lanche" class="btn btn-success btn-lg">Aproveitar</a>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLanches" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselLanches" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
 </div>
